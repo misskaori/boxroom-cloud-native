@@ -1,0 +1,6 @@
+## Append samples of your project ##
+resources:
+- boxroom_v1_storagelocations.yaml
+- boxroom_v1_backups.yaml
+- boxroom_v1_restores.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

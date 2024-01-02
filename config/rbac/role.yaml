@@ -1,0 +1,84 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - boxroom.io
+  resources:
+  - backups
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - boxroom.io
+  resources:
+  - backups/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - boxroom.io
+  resources:
+  - backups/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - boxroom.io
+  resources:
+  - restores
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - boxroom.io
+  resources:
+  - restores/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - boxroom.io
+  resources:
+  - restores/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - boxroom.io
+  resources:
+  - storagelocations
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - boxroom.io
+  resources:
+  - storagelocations/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - boxroom.io
+  resources:
+  - storagelocations/status
+  verbs:
+  - get
+  - patch
+  - update

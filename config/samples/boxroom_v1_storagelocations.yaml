@@ -1,0 +1,13 @@
+apiVersion: boxroom.io/v1
+kind: StorageLocations
+metadata:
+  labels:
+    app.kubernetes.io/name: storagelocations
+    app.kubernetes.io/instance: storagelocations-sample
+    app.kubernetes.io/part-of: demo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: demo
+  name: storagelocations-sample
+spec:
+  # TODO(user): Add fields here
+  storageKind: "1"

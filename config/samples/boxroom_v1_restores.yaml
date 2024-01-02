@@ -1,0 +1,12 @@
+apiVersion: boxroom.io/v1
+kind: Restores
+metadata:
+  labels:
+    app.kubernetes.io/name: restores
+    app.kubernetes.io/instance: restores-sample
+    app.kubernetes.io/part-of: demo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: demo
+  name: restores-sample
+spec:
+  # TODO(user): Add fields here

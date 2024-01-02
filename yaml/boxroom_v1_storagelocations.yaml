@@ -1,0 +1,27 @@
+apiVersion: boxroom.io/v1
+kind: StorageLocations
+metadata:
+  labels:
+    app.kubernetes.io/name: storagelocations
+    app.kubernetes.io/instance: storagelocations-sample
+    app.kubernetes.io/part-of: demo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: demo
+  name: storagelocations-sample
+  namespace: boxroom
+spec:
+  configSpec:
+    config:
+      accessKey: admin
+      bucket: boxroom
+      disableSSL: true
+      region: us-east-1
+      s3ForcePathStyle: true
+      secretKey: "12345678"
+      storageUrl: http://10.211.55.7:9000
+    storageKind: s3
+  containerSpec:
+    image: liuweizhe/boxroom-s3-plugin:1.0-arm64
+    port: 8082
+    protocol: TCP
+    replicas: 3
